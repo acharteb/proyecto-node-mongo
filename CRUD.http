@@ -1,0 +1,26 @@
+### Para crear un nuevo usuario (Hacer clic en Send Request)
+### Usando el complemento REST Client en Visual Studio Code
+### Asegurando que el servidor esté corriendo en http://localhost:3000
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "nombre": "Eliana Garcia",
+  "correo": "egarcia@gmail.com",
+  "edad": 38
+}
+
+### Actualizar un usuario
+# Desde http://localhost:3000/api/users pegamos el ID del usuario que se quieres actualizar en la URL
+PUT http://localhost:3000/api/users/ID_DEL_USUARIO
+Content-Type: application/json
+
+{
+  "nombre": "Karla Rios", //Lo que se quiere actualizar
+  "correo": "karla.rios@gmail.com",
+  "edad": 31
+}
+
+### Eliminar un usuario (mismo caso, cambiando el ID)
+DELETE http://localhost:3000/api/users/ID_DEL_USUARIO
